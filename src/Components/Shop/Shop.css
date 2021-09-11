@@ -1,0 +1,18 @@
+.container-shop{
+    display:grid;
+    grid-template-columns: 3fr 1fr;
+}
+.innerContainer-shop{
+    padding: 5px;
+    border-bottom: 2px solid red;
+    border-right: 2px solid red;
+    display: flex;
+    margin-left: 4px;
+}
+.innerContainer-card{ 
+    padding: 6px;
+    margin: 0 auto;
+}
+.xx{
+    padding: 4px;
+}
