@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const Card = (props) => {
     const s = props.counts.reduce((total,value)=>total+value.price,0);
   let shipping = 0;
