@@ -18,7 +18,7 @@ const Shop = () => {
         <div className="container-shop">
             <div>
             {
-                data.map(x=><Products x={x} key={x.key} events={handleEvent} />)
+                data.map(x=><Products x={x} key={x.key} showBTN={true} events={handleEvent} />)
             }
             </div>
             <div className="innerContainer-card">

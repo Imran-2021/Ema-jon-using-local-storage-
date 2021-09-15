@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Card = (props) => {
     const s = props.counts.reduce((total,value)=>total+value.price,0);
@@ -28,7 +29,7 @@ const Card = (props) => {
             <small>Shipping & Handing : {formatNumber(shipping)}</small> <br />
             <small>Tex : {formatNumber(tex)}</small>
             <h4>Total : {formatNumber(s+ shipping+tex)}</h4>
-            <button>Review Your Order</button>
+            <Link to="/review"><button>Review Your Order</button></Link>
         </div>
     );
 };
