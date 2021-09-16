@@ -24,7 +24,7 @@ const Shop = () => {
             }
             </div>
             <div className="innerContainer-card">
-                <Card counts={count} />
+                <Card showBTNN={true} counts={count} />
             </div>
         </div>
     );

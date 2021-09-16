@@ -1,8 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 const Card = (props) => {
-    const s = props.counts.reduce((total,value)=>total+value.price,0);
+    console.log(props.counts)
+    const s = props.counts.reduce((total,value)=>{
+        // console.log(value.quantity)
+   
+       
+       return total+ value.price* value.quantity;},0);
+    
   let shipping = 0;
+
   if(s>300){
       shipping = 0;
   }
@@ -28,7 +35,7 @@ const Card = (props) => {
             <small>Shipping & Handing : {formatNumber(shipping)}</small> <br />
             <small>Tex : {formatNumber(tex)}</small>
             <h4>Total : {formatNumber(s+ shipping+tex)}</h4>
-            <Link to="/review"><button>Review Your Order</button></Link>
+            {props.showBTNN ? <Link to="/review"><button>Review Your Order</button></Link>: <Link to="/management"><button>payment</button></Link>}
         </div>
     );
 };
