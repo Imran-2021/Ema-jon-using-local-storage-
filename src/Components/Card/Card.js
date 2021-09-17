@@ -4,8 +4,6 @@ const Card = (props) => {
     console.log(props.counts)
     const s = props.counts.reduce((total,value)=>{
         // console.log(value.quantity)
-   
-       
        return total+ value.price* value.quantity;},0);
     
   let shipping = 0;
