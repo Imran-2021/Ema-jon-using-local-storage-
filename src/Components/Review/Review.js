@@ -9,13 +9,10 @@ const Review = () => {
 
     const [cart,setCart]=useState([]);
     const [orderPlaced,setOrderPlaced]=useState(false);
-
-
     const handleCard=()=>{
         setCart([])
         setOrderPlaced(true)
         processOrder()
-
     }
     useEffect(() => {
         const data = getDatabaseCart();
@@ -59,3 +56,5 @@ const Review = () => {
 };
 
 export default Review;
+
+
