@@ -4,6 +4,7 @@ import fakeData from '../../fakeData';
 import Products from '../Products/Products';
 import Card from '../Card/Card';
 import { addToDatabaseCart, getDatabaseCart } from '../../utilities/databaseManager';
+import { Link } from 'react-router-dom';
 const Shop = () => {
     const first10 = fakeData.slice(0, 10)
 
@@ -49,7 +50,9 @@ const Shop = () => {
             }
             </div>
             <div className="innerContainer-card">
-                <Card showBTNN={true} counts={count} />
+                <Card showBTNN={true} counts={count}>
+                <Link to="/review"><button>Review Order</button></Link>
+                </Card>
             </div>
         </div>
     );

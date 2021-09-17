@@ -33,7 +33,9 @@ const Card = (props) => {
             <small>Shipping & Handing : {formatNumber(shipping)}</small> <br />
             <small>Tex : {formatNumber(tex)}</small>
             <h4>Total : {formatNumber(s+ shipping+tex)}</h4>
-            {props.showBTNN ? <Link to="/review"><button>Review Your Order</button></Link>: <Link to="/management"><button>payment</button></Link>}
+            {
+                props.children
+            }
         </div>
     );
 };
